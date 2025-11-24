@@ -4,10 +4,24 @@ on:
   workflow_dispatch:
 
 jobs:
-  hello_natixis:
+  build_and_test:
     runs-on: ubuntu-latest
     steps:
-      - name: Say Hello
+      - name: Get code
         run: |
-         echo "Hello Natixis"
+         echo "Obtendo código..."
+      - name: Install dependencies
+        run: |
+         echo "Instalando dependências..."
+      - name: Run tests
+        run: |
+         echo "Rodando testes..."
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build_and_test
+    steps:
+      - name: Deploy application
+        run: |
+         echo "Fazendo deploy da aplicação..."
          
