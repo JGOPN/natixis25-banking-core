@@ -15,13 +15,18 @@ jobs:
          echo "Instalando dependências..."
       - name: Run tests
         run: |
-         echo "Rodando testes..."
+         echo "Rodando testes..." 
 
   deploy:
     runs-on: ubuntu-latest
-    needs: build_and_test
     steps:
-      - name: Deploy application
+      - name: Get code
         run: |
-         echo "Fazendo deploy da aplicação..."
+         echo "Obtendo código..."
+      - name: Install dependencies
+        run: |
+         echo "Instalando dependências..."
+      - name: Run tests
+        run: |
+         echo "Rodando testes..." 
          
