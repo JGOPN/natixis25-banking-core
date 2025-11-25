@@ -25,6 +25,7 @@ jobs:
          python test_main.py
 
   buildImageAndPublish:
+    #Retirado de : https://github.com/marketplace/actions/build-and-push-docker-images
     runs-on: ubuntu-latest
     needs: build
     steps:
